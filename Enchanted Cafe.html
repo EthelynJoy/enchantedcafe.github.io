@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <a href="#" onclick="showImages()">Click here to view the menus</a>
+    <a href="#" onclick="toggleImages()">Click here to view the menus</a>
 
     <div id="imageContainer" style="display: none; margin-top: 20px;">
         <img class="menuImage" src="image1.png" alt="Menu Image 1" style="max-width: 100%; height: auto; display: block; margin-bottom: 10px;">
@@ -16,8 +16,14 @@
     </div>
 
     <script>
-        function showImages() {
-            document.getElementById("imageContainer").style.display = "block";
+        function toggleImages() {
+            var imageContainer = document.getElementById("imageContainer");
+            // Toggle the display property between "none" and "block"
+            if (imageContainer.style.display === "none") {
+                imageContainer.style.display = "block";
+            } else {
+                imageContainer.style.display = "none";
+            }
         }
     </script>
 
